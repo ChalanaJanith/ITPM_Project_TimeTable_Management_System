@@ -37,7 +37,6 @@
             this.Laboratory = new MetroFramework.Controls.MetroRadioButton();
             this.Capacity = new MetroFramework.Controls.MetroTextBox();
             this.SaveBtn = new MetroFramework.Controls.MetroButton();
-            this.CancelBtn = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
@@ -49,6 +48,8 @@
             this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.Btnsave = new MetroFramework.Controls.MetroTile();
+            this.Btncancel = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -148,19 +149,10 @@
             this.SaveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.SaveBtn.Location = new System.Drawing.Point(552, 414);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(90, 40);
+            this.SaveBtn.Size = new System.Drawing.Size(0, 0);
             this.SaveBtn.TabIndex = 6;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.Location = new System.Drawing.Point(694, 414);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(90, 40);
-            this.CancelBtn.Style = MetroFramework.MetroColorStyle.Red;
-            this.CancelBtn.TabIndex = 7;
-            this.CancelBtn.Text = "Cancel";
             // 
             // pictureBox1
             // 
@@ -176,12 +168,12 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage7);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Controls.Add(this.metroTabPage7);
             this.metroTabControl1.Controls.Add(this.metroTabPage8);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 84);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -194,7 +186,7 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(192, 6);
+            this.metroTabPage1.Size = new System.Drawing.Size(924, 6);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "metroTabPage1";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -280,6 +272,26 @@
             this.metroRadioButton1.Text = "Lecture Hall";
             this.metroRadioButton1.UseVisualStyleBackColor = true;
             // 
+            // Btnsave
+            // 
+            this.Btnsave.Location = new System.Drawing.Point(514, 414);
+            this.Btnsave.Name = "Btnsave";
+            this.Btnsave.Size = new System.Drawing.Size(90, 40);
+            this.Btnsave.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Btnsave.TabIndex = 11;
+            this.Btnsave.Text = "Save";
+            this.Btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Btncancel
+            // 
+            this.Btncancel.Location = new System.Drawing.Point(656, 414);
+            this.Btncancel.Name = "Btncancel";
+            this.Btncancel.Size = new System.Drawing.Size(90, 40);
+            this.Btncancel.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Btncancel.TabIndex = 12;
+            this.Btncancel.Text = "Cancel";
+            this.Btncancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AddLocation
             // 
             this.AccessibleDescription = "cads";
@@ -288,10 +300,11 @@
             this.BackgroundImage = global::ITPM_Project.Properties.Resources.JDlmniF;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(956, 497);
+            this.Controls.Add(this.Btncancel);
+            this.Controls.Add(this.Btnsave);
             this.Controls.Add(this.metroRadioButton1);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.Capacity);
             this.Controls.Add(this.Laboratory);
@@ -327,7 +340,6 @@
         private MetroFramework.Controls.MetroRadioButton Laboratory;
         private MetroFramework.Controls.MetroTextBox Capacity;
         private MetroFramework.Controls.MetroButton SaveBtn;
-        private MetroFramework.Controls.MetroButton CancelBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
@@ -339,5 +351,7 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage7;
         private MetroFramework.Controls.MetroTabPage metroTabPage8;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
+        private MetroFramework.Controls.MetroTile Btnsave;
+        private MetroFramework.Controls.MetroTile Btncancel;
     }
 }
