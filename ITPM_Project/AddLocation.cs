@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
+using MetroFramework.Animation;
 
 namespace ITPM_Project
 {
-    public partial class Form1 : Form
+    public partial class AddLocation : MetroForm
     {
-        public Form1()
+        public AddLocation()
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e) { }
     }
 }
