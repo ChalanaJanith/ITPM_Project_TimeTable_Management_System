@@ -50,8 +50,10 @@
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.Btnsave = new MetroFramework.Controls.MetroTile();
             this.Btncancel = new MetroFramework.Controls.MetroTile();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -60,7 +62,7 @@
             this.metroLabel1.BackColor = System.Drawing.Color.White;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroLabel1.Location = new System.Drawing.Point(190, 176);
+            this.metroLabel1.Location = new System.Drawing.Point(17, 41);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(108, 19);
             this.metroLabel1.TabIndex = 0;
@@ -108,7 +110,7 @@
             // 
             // BuildName
             // 
-            this.BuildName.Location = new System.Drawing.Point(349, 172);
+            this.BuildName.Location = new System.Drawing.Point(176, 37);
             this.BuildName.Name = "BuildName";
             this.BuildName.Size = new System.Drawing.Size(379, 23);
             this.BuildName.Style = MetroFramework.MetroColorStyle.Black;
@@ -281,6 +283,7 @@
             this.Btnsave.TabIndex = 11;
             this.Btnsave.Text = "Save";
             this.Btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Btnsave.Click += new System.EventHandler(this.Btnsave_Click);
             // 
             // Btncancel
             // 
@@ -291,6 +294,17 @@
             this.Btncancel.TabIndex = 12;
             this.Btncancel.Text = "Cancel";
             this.Btncancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.MintCream;
+            this.groupBox1.Controls.Add(this.BuildName);
+            this.groupBox1.Controls.Add(this.metroLabel1);
+            this.groupBox1.Location = new System.Drawing.Point(173, 151);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(601, 332);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
             // 
             // AddLocation
             // 
@@ -309,11 +323,10 @@
             this.Controls.Add(this.Capacity);
             this.Controls.Add(this.Laboratory);
             this.Controls.Add(this.RoomName);
-            this.Controls.Add(this.BuildName);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddLocation";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
@@ -324,6 +337,8 @@
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +368,6 @@
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private MetroFramework.Controls.MetroTile Btnsave;
         private MetroFramework.Controls.MetroTile Btncancel;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -54,9 +54,11 @@
             this.roomnamecol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomtyperadio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacitycol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Locationtable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Updatebtn
@@ -284,9 +286,9 @@
             this.roomnamecol,
             this.roomtyperadio,
             this.capacitycol});
-            this.Locationtable.Location = new System.Drawing.Point(517, 142);
+            this.Locationtable.Location = new System.Drawing.Point(517, 131);
             this.Locationtable.Name = "Locationtable";
-            this.Locationtable.Size = new System.Drawing.Size(443, 305);
+            this.Locationtable.Size = new System.Drawing.Size(443, 366);
             this.Locationtable.TabIndex = 10;
             // 
             // buildingnamecol
@@ -309,11 +311,22 @@
             this.capacitycol.HeaderText = "Capacity";
             this.capacitycol.Name = "capacitycol";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ITPM_Project.Properties.Resources.backward;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // ManageLocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 520);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Locationtable);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.Cancelbtn);
@@ -329,12 +342,14 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.groupBox1);
             this.Name = "ManageLocations";
+            this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "Manage Locations";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Locationtable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +383,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roomnamecol;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomtyperadio;
         private System.Windows.Forms.DataGridViewTextBoxColumn capacitycol;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
