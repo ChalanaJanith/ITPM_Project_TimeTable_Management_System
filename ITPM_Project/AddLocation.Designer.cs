@@ -40,12 +40,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.Btnsave = new MetroFramework.Controls.MetroTile();
@@ -170,12 +170,12 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage6);
             this.metroTabControl1.Controls.Add(this.metroTabPage7);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
             this.metroTabControl1.Controls.Add(this.metroTabPage8);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 84);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -192,6 +192,16 @@
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "metroTabPage1";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(924, 6);
+            this.metroTabPage7.TabIndex = 6;
+            this.metroTabPage7.Text = "metroTabPage7";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
             // 
             // metroTabPage2
             // 
@@ -242,16 +252,6 @@
             this.metroTabPage6.TabIndex = 5;
             this.metroTabPage6.Text = "metroTabPage6";
             this.metroTabPage6.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage7
-            // 
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(924, 6);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "metroTabPage7";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
             // 
             // metroTabPage8
             // 
@@ -313,7 +313,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ITPM_Project.Properties.Resources.JDlmniF;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(956, 497);
+            this.ClientSize = new System.Drawing.Size(956, 532);
             this.Controls.Add(this.Btncancel);
             this.Controls.Add(this.Btnsave);
             this.Controls.Add(this.metroRadioButton1);
