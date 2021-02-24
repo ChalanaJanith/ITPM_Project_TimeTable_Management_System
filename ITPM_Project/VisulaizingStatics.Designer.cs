@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.Reglectures = new MetroFramework.Controls.MetroLabel();
             this.Regstudents = new MetroFramework.Controls.MetroLabel();
             this.Regsubjects = new MetroFramework.Controls.MetroLabel();
@@ -42,12 +48,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -64,16 +64,16 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage7);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Controls.Add(this.metroTabPage7);
-            this.metroTabControl1.Location = new System.Drawing.Point(13, 77);
+            this.metroTabControl1.Location = new System.Drawing.Point(15, 77);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 6;
-            this.metroTabControl1.Size = new System.Drawing.Size(842, 49);
+            this.metroTabControl1.Size = new System.Drawing.Size(982, 49);
             this.metroTabControl1.TabIndex = 0;
             // 
             // metroTabPage1
@@ -81,16 +81,83 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(834, 10);
+            this.metroTabPage1.Size = new System.Drawing.Size(974, 10);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "metroTabPage1";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarSize = 12;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "metroTabPage2";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarSize = 12;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "metroTabPage3";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarSize = 12;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "metroTabPage4";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarSize = 12;
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "metroTabPage5";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarSize = 12;
+            // 
+            // metroTabPage6
+            // 
+            this.metroTabPage6.HorizontalScrollbarBarColor = true;
+            this.metroTabPage6.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage6.Name = "metroTabPage6";
+            this.metroTabPage6.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage6.TabIndex = 5;
+            this.metroTabPage6.Text = "metroTabPage6";
+            this.metroTabPage6.VerticalScrollbarBarColor = true;
+            this.metroTabPage6.VerticalScrollbarSize = 12;
+            // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage7.TabIndex = 6;
+            this.metroTabPage7.Text = "metroTabPage7";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
+            this.metroTabPage7.VerticalScrollbarSize = 12;
             // 
             // Reglectures
             // 
             this.Reglectures.AutoSize = true;
             this.Reglectures.BackColor = System.Drawing.Color.Gray;
-            this.Reglectures.Location = new System.Drawing.Point(23, 29);
+            this.Reglectures.Location = new System.Drawing.Point(27, 29);
             this.Reglectures.Name = "Reglectures";
             this.Reglectures.Size = new System.Drawing.Size(81, 19);
             this.Reglectures.TabIndex = 1;
@@ -99,7 +166,7 @@
             // Regstudents
             // 
             this.Regstudents.AutoSize = true;
-            this.Regstudents.Location = new System.Drawing.Point(21, 29);
+            this.Regstudents.Location = new System.Drawing.Point(24, 29);
             this.Regstudents.Name = "Regstudents";
             this.Regstudents.Size = new System.Drawing.Size(83, 19);
             this.Regstudents.TabIndex = 2;
@@ -108,7 +175,7 @@
             // Regsubjects
             // 
             this.Regsubjects.AutoSize = true;
-            this.Regsubjects.Location = new System.Drawing.Point(20, 29);
+            this.Regsubjects.Location = new System.Drawing.Point(23, 29);
             this.Regsubjects.Name = "Regsubjects";
             this.Regsubjects.Size = new System.Drawing.Size(83, 19);
             this.Regsubjects.TabIndex = 3;
@@ -117,7 +184,7 @@
             // Regrooms
             // 
             this.Regrooms.AutoSize = true;
-            this.Regrooms.Location = new System.Drawing.Point(23, 29);
+            this.Regrooms.Location = new System.Drawing.Point(27, 29);
             this.Regrooms.Name = "Regrooms";
             this.Regrooms.Size = new System.Drawing.Size(83, 19);
             this.Regrooms.TabIndex = 4;
@@ -127,9 +194,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkGray;
             this.groupBox1.Controls.Add(this.Reglectures);
-            this.groupBox1.Location = new System.Drawing.Point(73, 171);
+            this.groupBox1.Location = new System.Drawing.Point(85, 171);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(125, 79);
+            this.groupBox1.Size = new System.Drawing.Size(146, 79);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -137,9 +204,9 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gray;
             this.groupBox2.Controls.Add(this.Regstudents);
-            this.groupBox2.Location = new System.Drawing.Point(267, 171);
+            this.groupBox2.Location = new System.Drawing.Point(311, 171);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(125, 79);
+            this.groupBox2.Size = new System.Drawing.Size(146, 79);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -147,9 +214,9 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DarkGray;
             this.groupBox3.Controls.Add(this.Regsubjects);
-            this.groupBox3.Location = new System.Drawing.Point(473, 171);
+            this.groupBox3.Location = new System.Drawing.Point(552, 171);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(125, 79);
+            this.groupBox3.Size = new System.Drawing.Size(146, 79);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
@@ -157,98 +224,39 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Gray;
             this.groupBox4.Controls.Add(this.Regrooms);
-            this.groupBox4.Location = new System.Drawing.Point(670, 171);
+            this.groupBox4.Location = new System.Drawing.Point(782, 171);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(125, 79);
+            this.groupBox4.Size = new System.Drawing.Size(146, 79);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(834, 10);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "metroTabPage2";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(834, 10);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "metroTabPage3";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage4
-            // 
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(834, 10);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "metroTabPage4";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(834, 10);
-            this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "metroTabPage5";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage6
-            // 
-            this.metroTabPage6.HorizontalScrollbarBarColor = true;
-            this.metroTabPage6.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(834, 10);
-            this.metroTabPage6.TabIndex = 5;
-            this.metroTabPage6.Text = "metroTabPage6";
-            this.metroTabPage6.VerticalScrollbarBarColor = true;
-            // 
-            // metroTabPage7
-            // 
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(834, 10);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "metroTabPage7";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
-            // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(42, 256);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(49, 256);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Lecture Rooms";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Laboratories";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(556, 318);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Lecture Rooms";
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Laboratories";
+            this.chart1.Series.Add(series11);
+            this.chart1.Series.Add(series12);
+            this.chart1.Size = new System.Drawing.Size(649, 318);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(73, 140);
+            this.metroLabel1.Location = new System.Drawing.Point(85, 140);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(127, 19);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.TabIndex = 9;
             this.metroLabel1.Text = "Registered Lecturers";
             this.metroLabel1.UseStyleColors = true;
@@ -256,7 +264,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(267, 140);
+            this.metroLabel2.Location = new System.Drawing.Point(311, 140);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(124, 19);
             this.metroLabel2.TabIndex = 9;
@@ -266,7 +274,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(473, 140);
+            this.metroLabel3.Location = new System.Drawing.Point(552, 140);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(122, 19);
             this.metroLabel3.TabIndex = 9;
@@ -276,7 +284,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(670, 140);
+            this.metroLabel4.Location = new System.Drawing.Point(782, 140);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(116, 19);
             this.metroLabel4.TabIndex = 9;
@@ -285,9 +293,9 @@
             // 
             // VisulaizingStatics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 582);
+            this.ClientSize = new System.Drawing.Size(1009, 582);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -298,9 +306,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
+            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "VisulaizingStatics";
+            this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "visualizing statistic";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.metroTabControl1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
