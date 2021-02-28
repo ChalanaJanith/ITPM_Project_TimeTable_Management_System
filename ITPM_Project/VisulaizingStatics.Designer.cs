@@ -76,10 +76,12 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage7);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Location = new System.Drawing.Point(15, 77);
+            this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
+            this.metroTabControl1.Location = new System.Drawing.Point(123, 74);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 6;
-            this.metroTabControl1.Size = new System.Drawing.Size(982, 49);
+            this.metroTabControl1.Size = new System.Drawing.Size(829, 49);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControl1.TabIndex = 0;
             // 
             // metroTabPage1
@@ -153,7 +155,7 @@
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(974, 10);
+            this.metroTabPage4.Size = new System.Drawing.Size(821, 10);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "metroTabPage4";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
@@ -259,9 +261,10 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.Location = new System.Drawing.Point(85, 140);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(127, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(146, 19);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.TabIndex = 9;
             this.metroLabel1.Text = "Registered Lecturers";
@@ -270,9 +273,10 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.Location = new System.Drawing.Point(311, 140);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(124, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(142, 19);
             this.metroLabel2.TabIndex = 9;
             this.metroLabel2.Text = "Registered Students";
             this.metroLabel2.UseStyleColors = true;
@@ -280,9 +284,10 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel3.Location = new System.Drawing.Point(552, 140);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(122, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(140, 19);
             this.metroLabel3.TabIndex = 9;
             this.metroLabel3.Text = "Registered Subjects";
             this.metroLabel3.UseStyleColors = true;
@@ -290,9 +295,10 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.Location = new System.Drawing.Point(782, 140);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(116, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(131, 19);
             this.metroLabel4.TabIndex = 9;
             this.metroLabel4.Text = "Registered Rooms";
             this.metroLabel4.UseStyleColors = true;
@@ -316,7 +322,7 @@
             series4.Name = "Students";
             this.chart2.Series.Add(series3);
             this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(443, 318);
+            this.chart2.Size = new System.Drawing.Size(428, 318);
             this.chart2.TabIndex = 10;
             this.chart2.Text = "chart2";
             // 
