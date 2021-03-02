@@ -35,5 +35,30 @@ namespace ITPM_Project
         {
 
         }
+
+        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
