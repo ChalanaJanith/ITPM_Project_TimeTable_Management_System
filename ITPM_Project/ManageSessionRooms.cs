@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace ITPM_Project
 {
-    public partial class ManageSessionsBtn : MetroForm
+    public partial class ManageSessions : MetroForm
     {
-        public ManageSessionsBtn()
+        public ManageSessions()
         {
             InitializeComponent();
         }

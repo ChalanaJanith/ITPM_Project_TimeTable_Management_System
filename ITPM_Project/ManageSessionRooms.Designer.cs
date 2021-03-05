@@ -1,6 +1,6 @@
 ﻿namespace ITPM_Project
 {
-    partial class ManageSessionsBtn
+    partial class ManageSessions
     {
         /// <summary>
         /// Required designer variable.
@@ -121,7 +121,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage7);
             this.metroTabControl1.Location = new System.Drawing.Point(154, 72);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 4;
             this.metroTabControl1.Size = new System.Drawing.Size(824, 506);
             this.metroTabControl1.TabIndex = 6;
             // 
@@ -144,7 +144,7 @@
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(946, 467);
+            this.metroTabPage2.Size = new System.Drawing.Size(816, 467);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Subject and Tag";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -156,7 +156,7 @@
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(946, 467);
+            this.metroTabPage3.Size = new System.Drawing.Size(816, 467);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Lecturer";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
@@ -168,7 +168,7 @@
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(946, 467);
+            this.metroTabPage4.Size = new System.Drawing.Size(816, 467);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "Group/Sub Group";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
@@ -180,7 +180,7 @@
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(946, 467);
+            this.metroTabPage5.Size = new System.Drawing.Size(816, 467);
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "Session";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
@@ -191,7 +191,7 @@
             this.metroTabPage6.HorizontalScrollbarBarColor = true;
             this.metroTabPage6.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(946, 467);
+            this.metroTabPage6.Size = new System.Drawing.Size(816, 467);
             this.metroTabPage6.TabIndex = 5;
             this.metroTabPage6.Text = "Consecutive Session";
             this.metroTabPage6.VerticalScrollbarBarColor = true;
@@ -201,7 +201,7 @@
             this.metroTabPage7.HorizontalScrollbarBarColor = true;
             this.metroTabPage7.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(946, 467);
+            this.metroTabPage7.Size = new System.Drawing.Size(816, 467);
             this.metroTabPage7.TabIndex = 6;
             this.metroTabPage7.Text = "Non ReservableTime for a Room";
             this.metroTabPage7.VerticalScrollbarBarColor = true;
@@ -841,13 +841,13 @@
             this.panel6.Size = new System.Drawing.Size(769, 447);
             this.panel6.TabIndex = 11;
             // 
-            // ManageSessionsBtn
+            // ManageSessions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 703);
             this.Controls.Add(this.metroTabControl1);
-            this.Name = "ManageSessionsBtn";
+            this.Name = "ManageSessions";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Add Suitable Rooms";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
