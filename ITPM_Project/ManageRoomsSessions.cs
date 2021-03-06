@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace ITPM_Project
 {
-    public partial class ManageSessions : MetroForm
+    public partial class ManageRoomsSessions : Form
     {
-        public ManageSessions()
+        public ManageRoomsSessions()
         {
             InitializeComponent();
         }

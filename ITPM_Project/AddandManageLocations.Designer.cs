@@ -86,6 +86,7 @@
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -98,7 +99,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
@@ -241,7 +241,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage8);
             this.metroTabControl1.Location = new System.Drawing.Point(194, 48);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(902, 556);
             this.metroTabControl1.TabIndex = 10;
             // 
@@ -253,7 +253,7 @@
             this.metroTabPage3.Name = "metroTabPage3";
             this.metroTabPage3.Size = new System.Drawing.Size(894, 517);
             this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Add Location";
+            this.metroTabPage3.Text = "Add  Location";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             // 
             // metroPanel1
@@ -414,7 +414,7 @@
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(894, 517);
             this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "View Location";
+            this.metroTabPage1.Text = "View  Location";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             // 
             // dataGridView1
@@ -503,7 +503,7 @@
             this.metroTabPage8.Name = "metroTabPage8";
             this.metroTabPage8.Size = new System.Drawing.Size(894, 517);
             this.metroTabPage8.TabIndex = 7;
-            this.metroTabPage8.Text = "Manage Locations";
+            this.metroTabPage8.Text = "Manage  Locations";
             this.metroTabPage8.VerticalScrollbarBarColor = true;
             // 
             // metroPanel3
@@ -822,6 +822,20 @@
             this.metroLabel19.TabIndex = 3;
             this.metroLabel19.Text = "Locations";
             // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
+            this.metroLabel20.CustomBackground = true;
+            this.metroLabel20.CustomForeColor = true;
+            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(157)))), ((int)(((byte)(169)))));
+            this.metroLabel20.Location = new System.Drawing.Point(62, 518);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel20.TabIndex = 3;
+            this.metroLabel20.Text = "TimeTables";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
@@ -967,20 +981,6 @@
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // metroLabel20
-            // 
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(35)))), ((int)(((byte)(64)))));
-            this.metroLabel20.CustomBackground = true;
-            this.metroLabel20.CustomForeColor = true;
-            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(157)))), ((int)(((byte)(169)))));
-            this.metroLabel20.Location = new System.Drawing.Point(62, 518);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(84, 19);
-            this.metroLabel20.TabIndex = 3;
-            this.metroLabel20.Text = "TimeTables";
             // 
             // AddandManageLocations
             // 
