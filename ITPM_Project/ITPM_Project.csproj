@@ -122,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\process.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\window.png" />
     <None Include="Resources\calendar %284%29.png" />
     <None Include="Resources\line-bars.png" />
     <None Include="Resources\map %282%29.png" />
