@@ -16,7 +16,7 @@ namespace ITPM_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Visualizingstatistic());
+            Application.Run(new ManageRoomsSessions());
         }
     }
 }
