@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ITPM_Project.Properties;
 
 namespace ITPM_Project
 {
@@ -455,7 +456,9 @@ namespace ITPM_Project
 
             //LoadLocations();
             // ClearUpdateLocDetails();
-            //loc_tabcontrol.SelectedTab = viewloc_tab;
+            Loc_TabControl.SelectedTab = Load_Location_Page;
+
+
         }
 
         private void DeleteLocation_Btn_Click(object sender, EventArgs e)
@@ -468,6 +471,8 @@ namespace ITPM_Project
             cmd.ExecuteNonQuery();
             MessageBox.Show("Location Deleted!");
             con.Close();
+
+
 
             
         }

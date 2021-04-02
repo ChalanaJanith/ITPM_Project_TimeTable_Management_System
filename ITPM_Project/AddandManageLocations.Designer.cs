@@ -34,7 +34,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Loc_TabControl = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.Add_Location_tab = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Refresh_Combo_Box = new MetroFramework.Controls.MetroTile();
@@ -63,8 +63,8 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.Manage_Location_tab = new MetroFramework.Controls.MetroTabPage();
+            this.manage_Loc_tab = new MetroFramework.Controls.MetroPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.editRoomcombo_box = new MetroFramework.Controls.MetroComboBox();
             this.editBuilding_name_text_Box = new MetroFramework.Controls.MetroTextBox();
@@ -125,13 +125,13 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Loc_TabControl.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
+            this.Add_Location_tab.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddCapacity_cmb)).BeginInit();
-            this.metroTabPage1.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
+            this.Manage_Location_tab.SuspendLayout();
+            this.manage_Loc_tab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editCapacity)).BeginInit();
             this.Load_Location_Page.SuspendLayout();
@@ -217,26 +217,26 @@
             // 
             // Loc_TabControl
             // 
-            this.Loc_TabControl.Controls.Add(this.metroTabPage3);
+            this.Loc_TabControl.Controls.Add(this.Add_Location_tab);
+            this.Loc_TabControl.Controls.Add(this.Manage_Location_tab);
             this.Loc_TabControl.Controls.Add(this.Load_Location_Page);
-            this.Loc_TabControl.Controls.Add(this.metroTabPage1);
             this.Loc_TabControl.Location = new System.Drawing.Point(194, 50);
             this.Loc_TabControl.Name = "Loc_TabControl";
-            this.Loc_TabControl.SelectedIndex = 0;
+            this.Loc_TabControl.SelectedIndex = 1;
             this.Loc_TabControl.Size = new System.Drawing.Size(902, 561);
             this.Loc_TabControl.TabIndex = 10;
             // 
-            // metroTabPage3
+            // Add_Location_tab
             // 
-            this.metroTabPage3.Controls.Add(this.metroPanel1);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(894, 522);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Add  Location";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
+            this.Add_Location_tab.Controls.Add(this.metroPanel1);
+            this.Add_Location_tab.HorizontalScrollbarBarColor = true;
+            this.Add_Location_tab.Location = new System.Drawing.Point(4, 35);
+            this.Add_Location_tab.Name = "Add_Location_tab";
+            this.Add_Location_tab.Size = new System.Drawing.Size(894, 522);
+            this.Add_Location_tab.TabIndex = 2;
+            this.Add_Location_tab.Text = "Add  Location";
+            this.Add_Location_tab.VerticalScrollbarBarColor = true;
+            this.Add_Location_tab.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
             // metroPanel1
             // 
@@ -566,32 +566,32 @@
             this.metroLabel5.Text = "Room Type";
             this.metroLabel5.UseStyleColors = true;
             // 
-            // metroTabPage1
+            // Manage_Location_tab
             // 
-            this.metroTabPage1.Controls.Add(this.metroPanel2);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(894, 522);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Manage  Location";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.Manage_Location_tab.Controls.Add(this.manage_Loc_tab);
+            this.Manage_Location_tab.HorizontalScrollbarBarColor = true;
+            this.Manage_Location_tab.Location = new System.Drawing.Point(4, 35);
+            this.Manage_Location_tab.Name = "Manage_Location_tab";
+            this.Manage_Location_tab.Size = new System.Drawing.Size(894, 522);
+            this.Manage_Location_tab.TabIndex = 0;
+            this.Manage_Location_tab.Text = "Manage  Location";
+            this.Manage_Location_tab.VerticalScrollbarBarColor = true;
             // 
-            // metroPanel2
+            // manage_Loc_tab
             // 
-            this.metroPanel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroPanel2.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.metroPanel2.Controls.Add(this.groupBox1);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(-5, -4);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(904, 524);
-            this.metroPanel2.TabIndex = 18;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.manage_Loc_tab.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.manage_Loc_tab.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.manage_Loc_tab.Controls.Add(this.groupBox1);
+            this.manage_Loc_tab.HorizontalScrollbarBarColor = true;
+            this.manage_Loc_tab.HorizontalScrollbarHighlightOnWheel = false;
+            this.manage_Loc_tab.HorizontalScrollbarSize = 10;
+            this.manage_Loc_tab.Location = new System.Drawing.Point(-5, -4);
+            this.manage_Loc_tab.Name = "manage_Loc_tab";
+            this.manage_Loc_tab.Size = new System.Drawing.Size(904, 524);
+            this.manage_Loc_tab.TabIndex = 18;
+            this.manage_Loc_tab.VerticalScrollbarBarColor = true;
+            this.manage_Loc_tab.VerticalScrollbarHighlightOnWheel = false;
+            this.manage_Loc_tab.VerticalScrollbarSize = 10;
             // 
             // groupBox1
             // 
@@ -1339,15 +1339,15 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.Loc_TabControl.ResumeLayout(false);
-            this.metroTabPage3.ResumeLayout(false);
+            this.Add_Location_tab.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddCapacity_cmb)).EndInit();
-            this.metroTabPage1.ResumeLayout(false);
-            this.metroPanel2.ResumeLayout(false);
+            this.Manage_Location_tab.ResumeLayout(false);
+            this.manage_Loc_tab.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editCapacity)).EndInit();
@@ -1377,7 +1377,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private MetroFramework.Controls.MetroTabControl Loc_TabControl;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroTabPage Add_Location_tab;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.NumericUpDown AddCapacity_cmb;
@@ -1389,7 +1389,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage Manage_Location_tab;
         private MetroFramework.Controls.MetroTabPage Load_Location_Page;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1437,7 +1437,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private MetroFramework.Controls.MetroTextBox metroTextBox13;
         private MetroFramework.Controls.MetroComboBox metroComboBox3;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroPanel manage_Loc_tab;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroTextBox editBuilding_name_text_Box;
         private System.Windows.Forms.NumericUpDown editCapacity;
