@@ -97,6 +97,17 @@ namespace ITPM_Project
             this.WindowState = FormWindowState.Minimized;
         }
 
+
+        private void ClearLocationData()
+        {
+            Building_Combo_Box.SelectedIndex = -1;
+            Room_Combo_Box.SelectedIndex = -1;
+            AddCapacity_cmb.Value = 0;
+            Room_Combo_Box.SelectedIndex = -1;
+
+        }
+
+
         private void Save_Location_Button_Click(object sender, EventArgs e)
         {
 
@@ -120,6 +131,10 @@ namespace ITPM_Project
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Added");
                 con.Close();
+
+                LoadLocations();
+                ClearLocationData();
+                Loc_TabControl.SelectedTab = Load_Location_Page;
             }
 
 
@@ -130,6 +145,13 @@ namespace ITPM_Project
 
         }
 
+
+        private void ClearBuildingTextBox()
+        {
+            Add_Building_Name.Text = " ";
+          
+
+        }
 
         //Insert Building Name to the Building Table.....
 
@@ -151,12 +173,23 @@ namespace ITPM_Project
                 MessageBox.Show("Building successfuly Added!");
                 con.Close();
 
+                ClearBuildingTextBox();
+
             }
 
         }
 
 
         //Insert operation to Add Room for Room table.................
+
+        private void ClearRoomsTextBox()
+        {
+            Room_NametextBox.Text = " ";
+            Room_ID_textbox.Text = " ";
+            BuildingNameComboBox.SelectedIndex = -1;
+
+
+        }
 
         private void SaveRoom_Name_Click(object sender, EventArgs e)
         {
@@ -179,6 +212,8 @@ namespace ITPM_Project
                 MessageBox.Show("Room successfuly Added!");
                 con.Close();
 
+                ClearRoomsTextBox();
+
             }
 
         }
@@ -191,39 +226,7 @@ namespace ITPM_Project
 
         public void cmbdisp()
         {
-            /*  con.Open();
-               sql = "SELECT Buildingnames FROM BuildingsNameTable";
-               SqlCommand cmd = new SqlCommand(sql, con);
-               SqlDataReader dr = cmd.ExecuteReader();
-               DataTable dt = new DataTable();
-               SqlDataAdapter da = new SqlDataAdapter(cmd);
-               da.Fill(dt);*/
-
-            /*   BuildingNameComboBox.Items.Clear();
-               con.Open();
-               SqlCommand cmd = con.CreateCommand();
-               cmd.CommandType = CommandType.Text;
-               cmd.CommandText = "SELECT Buildingnames FROM BuildingsNameTable";
-               cmd.ExecuteNonQuery();
-               DataTable dt = new DataTable();
-               SqlDataAdapter da = new SqlDataAdapter(cmd);
-               da.Fill(dt); 
-
-
-               /*  while (dr.Read())
-                 {
-                BuildingNameComboBox.Items.Add(dr["Buildingnames"]. ToString());
-                BuildingNameComboBox.DisplayMember = (dr["Buildingnames"].ToString());
-                BuildingNameComboBox.ValueMember = (dr["Buildingnames"].ToString());
-                } */
-
-            /*foreach (DataRow dr in dt.Rows)
-            {
-                BuildingNameComboBox.Items.Add(dr["Buildingnames"].ToString());
-            }
-
-            con.Close();*/
-
+          
           BuildingNameComboBox.Items.Clear();
             con.Open();
             cmd = con.CreateCommand();
@@ -365,7 +368,7 @@ namespace ITPM_Project
 
         private void LoadLocations()
         {
-            /*con.Open();
+            con.Open();
             SqlCommand cmd = new SqlCommand("Select * from LocationTable", con);
             DataTable dt = new DataTable();
 
@@ -377,7 +380,7 @@ namespace ITPM_Project
 
             Location_Grid_View_Table.AutoGenerateColumns = true;
             Location_Grid_View_Table.DataSource = dt;
-            con.Close();*/
+            con.Close();
         }
 
 
@@ -391,6 +394,29 @@ namespace ITPM_Project
 
 
         //Edit Locations...................
+
+        private void ClearUpdateLocDetails()
+        {
+            editRoomcombo_box.SelectedIndex = -1;
+            editBuilding_name_text_Box.Clear();
+            editCapacity.Value = 0;
+            editRoomType_cmb.SelectedIndex = -1;
+        }
+
+
+        private void Location_Load(object sender, EventArgs e)
+        {
+            LoadLocations();
+
+        }
+
+        private void Location_Grid_View_Table_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            editBuilding_name_text_Box.Text = Location_Grid_View_Table.CurrentRow.Cells[0].Value.ToString();
+            editRoomcombo_box.Text = Location_Grid_View_Table.CurrentRow.Cells[1].Value.ToString();
+            editCapacity.Text = Location_Grid_View_Table.CurrentRow.Cells[2].Value.ToString();
+            editRoomType_cmb.Text = Location_Grid_View_Table.CurrentRow.Cells[3].Value.ToString();
+        }
 
         private void editroom_cmb_DropDown()
         {
@@ -442,6 +468,7 @@ namespace ITPM_Project
 
         }
 
+
         //update Button code............
 
         private void metroTile4_Click(object sender, EventArgs e)
@@ -454,12 +481,14 @@ namespace ITPM_Project
             MessageBox.Show("Location Updated!");
             con.Close();
 
-            //LoadLocations();
-            // ClearUpdateLocDetails();
+            LoadLocations();
+            ClearUpdateLocDetails();
             Loc_TabControl.SelectedTab = Load_Location_Page;
 
 
         }
+
+        //Delete location Button...................
 
         private void DeleteLocation_Btn_Click(object sender, EventArgs e)
         {
@@ -473,8 +502,99 @@ namespace ITPM_Project
             con.Close();
 
 
+            LoadLocations();
+            ClearUpdateLocDetails();
+            Loc_TabControl.SelectedTab = Load_Location_Page;
 
-            
+
+
+
+
+        }
+
+
+        //Search Part.................................
+
+
+        private void search_txt_box_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void loc_dgridv_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Location_Grid_View_Table.Sort(Location_Grid_View_Table.Columns[0], ListSortDirection.Ascending);
+            Location_Grid_View_Table.Sort(Location_Grid_View_Table.Columns[1], ListSortDirection.Ascending);
+            Location_Grid_View_Table.Sort(Location_Grid_View_Table.Columns[2], ListSortDirection.Descending);
+            Location_Grid_View_Table.Sort(Location_Grid_View_Table.Columns[3], ListSortDirection.Ascending);
+        }
+
+        private void search_txt_box_Click(object sender, EventArgs e)
+        {
+
+
+            if (searchby_cmb.Text == "Building")
+            {
+             
+                
+                string query = "SELECT * FROM LocationTable WHERE BuildingName LIKE '%" + search_txt_box.Text + "%'";
+                con.Open();
+                SqlCommand Command = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(Command);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                Location_Grid_View_Table.DataSource = dt;
+                con.Close();
+
+            }
+
+
+            if (searchby_cmb.Text == "Room")
+            {
+
+                string query = "SELECT * FROM LocationTable WHERE RoomName LIKE '%" + search_txt_box.Text + "%'";
+                con.Open();
+                SqlCommand Command = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(Command);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                Location_Grid_View_Table.DataSource = dt;
+                con.Close();
+
+            }
+
+            if (searchby_cmb.Text == "Capacity")
+            {
+
+
+                string query = "SELECT * FROM LocationTable WHERE Capacity LIKE '%" + search_txt_box.Text + "%'";
+                con.Open();
+                SqlCommand Command = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(Command);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                Location_Grid_View_Table.DataSource = dt;
+                con.Close();
+
+            }
+
+            if (searchby_cmb.Text == "Room Type")
+            {
+
+                string query = "SELECT * FROM LocationTable WHERE RoomType LIKE '%" + search_txt_box.Text + "%'";
+                con.Open();
+                SqlCommand Command = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(Command);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                Location_Grid_View_Table.DataSource = dt;
+                con.Close();
+
+
+            }
+
         }
     }
 }

@@ -78,13 +78,9 @@
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.Load_Location_Page = new MetroFramework.Controls.MetroTabPage();
-            this.metroTextBox13 = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.search_txt_box = new MetroFramework.Controls.MetroTextBox();
+            this.searchby_cmb = new MetroFramework.Controls.MetroComboBox();
             this.Location_Grid_View_Table = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -222,7 +218,7 @@
             this.Loc_TabControl.Controls.Add(this.Load_Location_Page);
             this.Loc_TabControl.Location = new System.Drawing.Point(194, 50);
             this.Loc_TabControl.Name = "Loc_TabControl";
-            this.Loc_TabControl.SelectedIndex = 1;
+            this.Loc_TabControl.SelectedIndex = 2;
             this.Loc_TabControl.Size = new System.Drawing.Size(902, 561);
             this.Loc_TabControl.TabIndex = 10;
             // 
@@ -731,8 +727,8 @@
             // 
             // Load_Location_Page
             // 
-            this.Load_Location_Page.Controls.Add(this.metroTextBox13);
-            this.Load_Location_Page.Controls.Add(this.metroComboBox3);
+            this.Load_Location_Page.Controls.Add(this.search_txt_box);
+            this.Load_Location_Page.Controls.Add(this.searchby_cmb);
             this.Load_Location_Page.Controls.Add(this.Location_Grid_View_Table);
             this.Load_Location_Page.HorizontalScrollbarBarColor = true;
             this.Load_Location_Page.Location = new System.Drawing.Point(4, 35);
@@ -743,69 +739,41 @@
             this.Load_Location_Page.VerticalScrollbarBarColor = true;
             this.Load_Location_Page.Click += new System.EventHandler(this.Load_Location_Page_Click);
             // 
-            // metroTextBox13
+            // search_txt_box
             // 
-            this.metroTextBox13.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox13.Location = new System.Drawing.Point(457, 25);
-            this.metroTextBox13.Name = "metroTextBox13";
-            this.metroTextBox13.Size = new System.Drawing.Size(248, 29);
-            this.metroTextBox13.TabIndex = 7;
+            this.search_txt_box.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.search_txt_box.Location = new System.Drawing.Point(457, 25);
+            this.search_txt_box.Name = "search_txt_box";
+            this.search_txt_box.Size = new System.Drawing.Size(248, 29);
+            this.search_txt_box.TabIndex = 7;
+            this.search_txt_box.Click += new System.EventHandler(this.search_txt_box_Click);
             // 
-            // metroComboBox3
+            // searchby_cmb
             // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Location = new System.Drawing.Point(225, 25);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(197, 29);
-            this.metroComboBox3.TabIndex = 6;
+            this.searchby_cmb.FormattingEnabled = true;
+            this.searchby_cmb.ItemHeight = 23;
+            this.searchby_cmb.Items.AddRange(new object[] {
+            "Building",
+            "Room",
+            "Capacity",
+            "Room Type"});
+            this.searchby_cmb.Location = new System.Drawing.Point(225, 25);
+            this.searchby_cmb.Name = "searchby_cmb";
+            this.searchby_cmb.Size = new System.Drawing.Size(197, 29);
+            this.searchby_cmb.TabIndex = 6;
             // 
             // Location_Grid_View_Table
             // 
-            this.Location_Grid_View_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Location_Grid_View_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.Location_Grid_View_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Location_Grid_View_Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.Location_Grid_View_Table.ColumnHeadersHeight = 50;
             this.Location_Grid_View_Table.Location = new System.Drawing.Point(26, 80);
             this.Location_Grid_View_Table.Name = "Location_Grid_View_Table";
-            this.Location_Grid_View_Table.Size = new System.Drawing.Size(843, 433);
+            this.Location_Grid_View_Table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.Location_Grid_View_Table.RowHeadersWidth = 100;
+            this.Location_Grid_View_Table.Size = new System.Drawing.Size(1000, 433);
             this.Location_Grid_View_Table.TabIndex = 5;
             this.Location_Grid_View_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Location_Grid_View_Table_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Building";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Room";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn6.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Capacity";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn7.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Room Type";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn8.Width = 200;
             // 
             // pictureBox2
             // 
@@ -1431,12 +1399,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView Location_Grid_View_Table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private MetroFramework.Controls.MetroTextBox metroTextBox13;
-        private MetroFramework.Controls.MetroComboBox metroComboBox3;
+        private MetroFramework.Controls.MetroTextBox search_txt_box;
+        private MetroFramework.Controls.MetroComboBox searchby_cmb;
         private MetroFramework.Controls.MetroPanel manage_Loc_tab;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroTextBox editBuilding_name_text_Box;
