@@ -119,6 +119,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.Edit_Refresh_Button = new MetroFramework.Controls.MetroTile();
             this.panel2.SuspendLayout();
             this.Loc_TabControl.SuspendLayout();
             this.Add_Location_tab.SuspendLayout();
@@ -214,11 +215,11 @@
             // Loc_TabControl
             // 
             this.Loc_TabControl.Controls.Add(this.Add_Location_tab);
-            this.Loc_TabControl.Controls.Add(this.Manage_Location_tab);
             this.Loc_TabControl.Controls.Add(this.Load_Location_Page);
+            this.Loc_TabControl.Controls.Add(this.Manage_Location_tab);
             this.Loc_TabControl.Location = new System.Drawing.Point(194, 50);
             this.Loc_TabControl.Name = "Loc_TabControl";
-            this.Loc_TabControl.SelectedIndex = 2;
+            this.Loc_TabControl.SelectedIndex = 0;
             this.Loc_TabControl.Size = new System.Drawing.Size(902, 561);
             this.Loc_TabControl.TabIndex = 10;
             // 
@@ -425,7 +426,7 @@
             // 
             this.Refresh_Room_Btn.Location = new System.Drawing.Point(286, 138);
             this.Refresh_Room_Btn.Name = "Refresh_Room_Btn";
-            this.Refresh_Room_Btn.Size = new System.Drawing.Size(123, 29);
+            this.Refresh_Room_Btn.Size = new System.Drawing.Size(117, 29);
             this.Refresh_Room_Btn.Style = MetroFramework.MetroColorStyle.Green;
             this.Refresh_Room_Btn.TabIndex = 18;
             this.Refresh_Room_Btn.Text = "Refresh Rooms";
@@ -437,7 +438,7 @@
             // 
             this.Refresh_Select_Building_Combo.Location = new System.Drawing.Point(284, 47);
             this.Refresh_Select_Building_Combo.Name = "Refresh_Select_Building_Combo";
-            this.Refresh_Select_Building_Combo.Size = new System.Drawing.Size(125, 29);
+            this.Refresh_Select_Building_Combo.Size = new System.Drawing.Size(119, 29);
             this.Refresh_Select_Building_Combo.Style = MetroFramework.MetroColorStyle.Green;
             this.Refresh_Select_Building_Combo.TabIndex = 17;
             this.Refresh_Select_Building_Combo.Text = "Refresh";
@@ -487,7 +488,7 @@
             // 
             // Clear_Location_Button
             // 
-            this.Clear_Location_Button.Location = new System.Drawing.Point(274, 343);
+            this.Clear_Location_Button.Location = new System.Drawing.Point(274, 332);
             this.Clear_Location_Button.Name = "Clear_Location_Button";
             this.Clear_Location_Button.Size = new System.Drawing.Size(112, 40);
             this.Clear_Location_Button.Style = MetroFramework.MetroColorStyle.Green;
@@ -498,7 +499,7 @@
             // 
             // Save_Location_Button
             // 
-            this.Save_Location_Button.Location = new System.Drawing.Point(118, 344);
+            this.Save_Location_Button.Location = new System.Drawing.Point(118, 332);
             this.Save_Location_Button.Name = "Save_Location_Button";
             this.Save_Location_Button.Size = new System.Drawing.Size(125, 40);
             this.Save_Location_Button.Style = MetroFramework.MetroColorStyle.Green;
@@ -592,6 +593,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.MintCream;
+            this.groupBox1.Controls.Add(this.Edit_Refresh_Button);
             this.groupBox1.Controls.Add(this.editRoomcombo_box);
             this.groupBox1.Controls.Add(this.editBuilding_name_text_Box);
             this.groupBox1.Controls.Add(this.editCapacity);
@@ -615,7 +617,7 @@
             this.editRoomcombo_box.ItemHeight = 23;
             this.editRoomcombo_box.Location = new System.Drawing.Point(165, 47);
             this.editRoomcombo_box.Name = "editRoomcombo_box";
-            this.editRoomcombo_box.Size = new System.Drawing.Size(300, 29);
+            this.editRoomcombo_box.Size = new System.Drawing.Size(194, 29);
             this.editRoomcombo_box.TabIndex = 8;
             this.editRoomcombo_box.SelectedIndexChanged += new System.EventHandler(this.editRoomcombo_box_SelectedIndexChanged);
             // 
@@ -767,11 +769,11 @@
             this.Location_Grid_View_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Location_Grid_View_Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.Location_Grid_View_Table.ColumnHeadersHeight = 50;
-            this.Location_Grid_View_Table.Location = new System.Drawing.Point(26, 80);
+            this.Location_Grid_View_Table.Location = new System.Drawing.Point(79, 67);
             this.Location_Grid_View_Table.Name = "Location_Grid_View_Table";
             this.Location_Grid_View_Table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.Location_Grid_View_Table.RowHeadersWidth = 100;
-            this.Location_Grid_View_Table.Size = new System.Drawing.Size(1000, 433);
+            this.Location_Grid_View_Table.Size = new System.Drawing.Size(758, 433);
             this.Location_Grid_View_Table.TabIndex = 5;
             this.Location_Grid_View_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Location_Grid_View_Table_CellContentClick);
             // 
@@ -1290,6 +1292,18 @@
             this.button8.TabIndex = 4;
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // Edit_Refresh_Button
+            // 
+            this.Edit_Refresh_Button.Location = new System.Drawing.Point(366, 47);
+            this.Edit_Refresh_Button.Name = "Edit_Refresh_Button";
+            this.Edit_Refresh_Button.Size = new System.Drawing.Size(116, 29);
+            this.Edit_Refresh_Button.Style = MetroFramework.MetroColorStyle.Green;
+            this.Edit_Refresh_Button.TabIndex = 9;
+            this.Edit_Refresh_Button.Text = "Refresh Rooms";
+            this.Edit_Refresh_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Edit_Refresh_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Edit_Refresh_Button.Click += new System.EventHandler(this.Edit_Refresh_Button_Click);
+            // 
             // AddandManageLocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1431,5 +1445,6 @@
         private MetroFramework.Controls.MetroTile Refresh_Room_Btn;
         private MetroFramework.Controls.MetroTile Refresh_Select_Building_Combo;
         private MetroFramework.Controls.MetroComboBox editRoomcombo_box;
+        private MetroFramework.Controls.MetroTile Edit_Refresh_Button;
     }
 }

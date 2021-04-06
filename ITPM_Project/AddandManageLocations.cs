@@ -61,7 +61,7 @@ namespace ITPM_Project
             if(dr.Read())
             {
                 int id = int.Parse(dr[0].ToString()) + 1;
-                roomID = id.ToString("0001");
+                roomID = id.ToString("0000");
 
             }
             else if(Convert.IsDBNull(dr))
@@ -213,6 +213,7 @@ namespace ITPM_Project
                 con.Close();
 
                 ClearRoomsTextBox();
+                RoomAutono();
 
             }
 
@@ -220,11 +221,28 @@ namespace ITPM_Project
 
         private void BuildingNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
+           
         }
 
-        public void cmbdisp()
+
+        private void LoadBuilding()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Buildingnames FROM BuildingsNameTable", con);
+            DataTable dt = new DataTable();
+
+
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+
+            //loc_dgridv.AutoGenerateColumns = true;
+            //loc_dgridv.DataSource = dt;
+            con.Close();
+        }
+
+         public void cmbdisp()
         {
           
           BuildingNameComboBox.Items.Clear();
@@ -242,8 +260,9 @@ namespace ITPM_Project
                 BuildingNameComboBox.Items.Add(dr["Buildingnames"].ToString());
             }
 
-            con.Close(); 
-        }
+            con.Close();
+
+        } 
 
 
         public void Select_Building_ComboBox()
@@ -546,7 +565,7 @@ namespace ITPM_Project
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 Location_Grid_View_Table.DataSource = dt;
-                con.Close();
+                con.Close(); 
 
             }
 
@@ -595,6 +614,29 @@ namespace ITPM_Project
 
             }
 
+        }
+
+        //edit page Room Refresh Button--------------------------------------------------
+
+        private void Edit_Refresh_Button_Click(object sender, EventArgs e)
+        {
+            editRoomcombo_box.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT RoomName FROM LocationTable";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                editRoomcombo_box.Items.Add(dr["RoomName"].ToString());
+            }
+
+            con.Close();
         }
     }
 }
