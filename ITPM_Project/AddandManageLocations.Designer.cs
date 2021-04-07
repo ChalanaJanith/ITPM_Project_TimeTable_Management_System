@@ -63,9 +63,14 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.Load_Location_Page = new MetroFramework.Controls.MetroTabPage();
+            this.search_txt_box = new MetroFramework.Controls.MetroTextBox();
+            this.searchby_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.Location_Grid_View_Table = new System.Windows.Forms.DataGridView();
             this.Manage_Location_tab = new MetroFramework.Controls.MetroTabPage();
             this.manage_Loc_tab = new MetroFramework.Controls.MetroPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Edit_Refresh_Button = new MetroFramework.Controls.MetroTile();
             this.editRoomcombo_box = new MetroFramework.Controls.MetroComboBox();
             this.editBuilding_name_text_Box = new MetroFramework.Controls.MetroTextBox();
             this.editCapacity = new System.Windows.Forms.NumericUpDown();
@@ -77,10 +82,6 @@
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.Load_Location_Page = new MetroFramework.Controls.MetroTabPage();
-            this.search_txt_box = new MetroFramework.Controls.MetroTextBox();
-            this.searchby_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.Location_Grid_View_Table = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -119,7 +120,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.Edit_Refresh_Button = new MetroFramework.Controls.MetroTile();
             this.panel2.SuspendLayout();
             this.Loc_TabControl.SuspendLayout();
             this.Add_Location_tab.SuspendLayout();
@@ -127,12 +127,12 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddCapacity_cmb)).BeginInit();
+            this.Load_Location_Page.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Location_Grid_View_Table)).BeginInit();
             this.Manage_Location_tab.SuspendLayout();
             this.manage_Loc_tab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editCapacity)).BeginInit();
-            this.Load_Location_Page.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Location_Grid_View_Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -310,7 +310,7 @@
             // 
             // SaveBuilding_Name
             // 
-            this.SaveBuilding_Name.Location = new System.Drawing.Point(328, 48);
+            this.SaveBuilding_Name.Location = new System.Drawing.Point(327, 48);
             this.SaveBuilding_Name.Name = "SaveBuilding_Name";
             this.SaveBuilding_Name.Size = new System.Drawing.Size(125, 29);
             this.SaveBuilding_Name.Style = MetroFramework.MetroColorStyle.Green;
@@ -563,6 +563,56 @@
             this.metroLabel5.Text = "Room Type";
             this.metroLabel5.UseStyleColors = true;
             // 
+            // Load_Location_Page
+            // 
+            this.Load_Location_Page.Controls.Add(this.search_txt_box);
+            this.Load_Location_Page.Controls.Add(this.searchby_cmb);
+            this.Load_Location_Page.Controls.Add(this.Location_Grid_View_Table);
+            this.Load_Location_Page.HorizontalScrollbarBarColor = true;
+            this.Load_Location_Page.Location = new System.Drawing.Point(4, 35);
+            this.Load_Location_Page.Name = "Load_Location_Page";
+            this.Load_Location_Page.Size = new System.Drawing.Size(894, 522);
+            this.Load_Location_Page.TabIndex = 7;
+            this.Load_Location_Page.Text = "View  Locations";
+            this.Load_Location_Page.VerticalScrollbarBarColor = true;
+            this.Load_Location_Page.Click += new System.EventHandler(this.Load_Location_Page_Click);
+            // 
+            // search_txt_box
+            // 
+            this.search_txt_box.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.search_txt_box.Location = new System.Drawing.Point(457, 25);
+            this.search_txt_box.Name = "search_txt_box";
+            this.search_txt_box.Size = new System.Drawing.Size(248, 29);
+            this.search_txt_box.TabIndex = 7;
+            this.search_txt_box.Click += new System.EventHandler(this.search_txt_box_Click);
+            // 
+            // searchby_cmb
+            // 
+            this.searchby_cmb.FormattingEnabled = true;
+            this.searchby_cmb.ItemHeight = 23;
+            this.searchby_cmb.Items.AddRange(new object[] {
+            "Building",
+            "Room",
+            "Capacity",
+            "Room Type"});
+            this.searchby_cmb.Location = new System.Drawing.Point(225, 25);
+            this.searchby_cmb.Name = "searchby_cmb";
+            this.searchby_cmb.Size = new System.Drawing.Size(197, 29);
+            this.searchby_cmb.TabIndex = 6;
+            // 
+            // Location_Grid_View_Table
+            // 
+            this.Location_Grid_View_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Location_Grid_View_Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.Location_Grid_View_Table.ColumnHeadersHeight = 50;
+            this.Location_Grid_View_Table.Location = new System.Drawing.Point(79, 67);
+            this.Location_Grid_View_Table.Name = "Location_Grid_View_Table";
+            this.Location_Grid_View_Table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.Location_Grid_View_Table.RowHeadersWidth = 100;
+            this.Location_Grid_View_Table.Size = new System.Drawing.Size(758, 433);
+            this.Location_Grid_View_Table.TabIndex = 5;
+            this.Location_Grid_View_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Location_Grid_View_Table_CellContentClick);
+            // 
             // Manage_Location_tab
             // 
             this.Manage_Location_tab.Controls.Add(this.manage_Loc_tab);
@@ -610,6 +660,18 @@
             this.groupBox1.Size = new System.Drawing.Size(511, 410);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
+            // 
+            // Edit_Refresh_Button
+            // 
+            this.Edit_Refresh_Button.Location = new System.Drawing.Point(366, 47);
+            this.Edit_Refresh_Button.Name = "Edit_Refresh_Button";
+            this.Edit_Refresh_Button.Size = new System.Drawing.Size(116, 29);
+            this.Edit_Refresh_Button.Style = MetroFramework.MetroColorStyle.Green;
+            this.Edit_Refresh_Button.TabIndex = 9;
+            this.Edit_Refresh_Button.Text = "Refresh Rooms";
+            this.Edit_Refresh_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Edit_Refresh_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Edit_Refresh_Button.Click += new System.EventHandler(this.Edit_Refresh_Button_Click);
             // 
             // editRoomcombo_box
             // 
@@ -726,56 +788,6 @@
             this.metroLabel12.Size = new System.Drawing.Size(0, 0);
             this.metroLabel12.TabIndex = 0;
             this.metroLabel12.UseStyleColors = true;
-            // 
-            // Load_Location_Page
-            // 
-            this.Load_Location_Page.Controls.Add(this.search_txt_box);
-            this.Load_Location_Page.Controls.Add(this.searchby_cmb);
-            this.Load_Location_Page.Controls.Add(this.Location_Grid_View_Table);
-            this.Load_Location_Page.HorizontalScrollbarBarColor = true;
-            this.Load_Location_Page.Location = new System.Drawing.Point(4, 35);
-            this.Load_Location_Page.Name = "Load_Location_Page";
-            this.Load_Location_Page.Size = new System.Drawing.Size(894, 522);
-            this.Load_Location_Page.TabIndex = 7;
-            this.Load_Location_Page.Text = "View  Locations";
-            this.Load_Location_Page.VerticalScrollbarBarColor = true;
-            this.Load_Location_Page.Click += new System.EventHandler(this.Load_Location_Page_Click);
-            // 
-            // search_txt_box
-            // 
-            this.search_txt_box.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.search_txt_box.Location = new System.Drawing.Point(457, 25);
-            this.search_txt_box.Name = "search_txt_box";
-            this.search_txt_box.Size = new System.Drawing.Size(248, 29);
-            this.search_txt_box.TabIndex = 7;
-            this.search_txt_box.Click += new System.EventHandler(this.search_txt_box_Click);
-            // 
-            // searchby_cmb
-            // 
-            this.searchby_cmb.FormattingEnabled = true;
-            this.searchby_cmb.ItemHeight = 23;
-            this.searchby_cmb.Items.AddRange(new object[] {
-            "Building",
-            "Room",
-            "Capacity",
-            "Room Type"});
-            this.searchby_cmb.Location = new System.Drawing.Point(225, 25);
-            this.searchby_cmb.Name = "searchby_cmb";
-            this.searchby_cmb.Size = new System.Drawing.Size(197, 29);
-            this.searchby_cmb.TabIndex = 6;
-            // 
-            // Location_Grid_View_Table
-            // 
-            this.Location_Grid_View_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Location_Grid_View_Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.Location_Grid_View_Table.ColumnHeadersHeight = 50;
-            this.Location_Grid_View_Table.Location = new System.Drawing.Point(79, 67);
-            this.Location_Grid_View_Table.Name = "Location_Grid_View_Table";
-            this.Location_Grid_View_Table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.Location_Grid_View_Table.RowHeadersWidth = 100;
-            this.Location_Grid_View_Table.Size = new System.Drawing.Size(758, 433);
-            this.Location_Grid_View_Table.TabIndex = 5;
-            this.Location_Grid_View_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Location_Grid_View_Table_CellContentClick);
             // 
             // pictureBox2
             // 
@@ -1292,18 +1304,6 @@
             this.button8.TabIndex = 4;
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // Edit_Refresh_Button
-            // 
-            this.Edit_Refresh_Button.Location = new System.Drawing.Point(366, 47);
-            this.Edit_Refresh_Button.Name = "Edit_Refresh_Button";
-            this.Edit_Refresh_Button.Size = new System.Drawing.Size(116, 29);
-            this.Edit_Refresh_Button.Style = MetroFramework.MetroColorStyle.Green;
-            this.Edit_Refresh_Button.TabIndex = 9;
-            this.Edit_Refresh_Button.Text = "Refresh Rooms";
-            this.Edit_Refresh_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Edit_Refresh_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Edit_Refresh_Button.Click += new System.EventHandler(this.Edit_Refresh_Button_Click);
-            // 
             // AddandManageLocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1328,13 +1328,13 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddCapacity_cmb)).EndInit();
+            this.Load_Location_Page.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Location_Grid_View_Table)).EndInit();
             this.Manage_Location_tab.ResumeLayout(false);
             this.manage_Loc_tab.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editCapacity)).EndInit();
-            this.Load_Location_Page.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Location_Grid_View_Table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();

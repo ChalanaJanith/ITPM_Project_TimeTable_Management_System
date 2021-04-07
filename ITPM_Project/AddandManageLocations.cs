@@ -173,11 +173,33 @@ namespace ITPM_Project
                 MessageBox.Show("Building successfuly Added!");
                 con.Close();
 
+                building_cmb();
                 ClearBuildingTextBox();
 
             }
 
         }
+
+         
+        private void building_cmb()
+        {
+
+            sql = "select * from BuildingsNameTable";
+            cmd = new SqlCommand(sql, con);
+            con.Open();
+            dr = cmd.ExecuteReader();
+            BuildingNameComboBox.Items.Clear();
+
+            while (dr.Read())
+            {
+                BuildingNameComboBox.Items.Add(dr[0]);
+
+            }
+
+            con.Close();
+        }
+
+      
 
 
         //Insert operation to Add Room for Room table.................
@@ -298,7 +320,7 @@ namespace ITPM_Project
 
         private void Refresh_Combo_Box_Click(object sender, EventArgs e)
         {
-            sql = "select * from BuildingsNameTable";
+            /*sql = "select * from BuildingsNameTable";
             cmd = new SqlCommand(sql, con);
             con.Open();
             dr = cmd.ExecuteReader();
@@ -310,7 +332,7 @@ namespace ITPM_Project
 
             }
 
-            con.Close();
+            con.Close(); */
         }
 
 
