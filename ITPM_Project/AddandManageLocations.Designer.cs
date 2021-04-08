@@ -37,7 +37,6 @@
             this.Add_Location_tab = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Refresh_Combo_Box = new MetroFramework.Controls.MetroTile();
             this.BuildingNameComboBox = new MetroFramework.Controls.MetroComboBox();
             this.SaveRoom_Name = new MetroFramework.Controls.MetroTile();
             this.SaveBuilding_Name = new MetroFramework.Controls.MetroTile();
@@ -51,7 +50,6 @@
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Refresh_Room_Btn = new MetroFramework.Controls.MetroTile();
-            this.Refresh_Select_Building_Combo = new MetroFramework.Controls.MetroTile();
             this.Room_Combo_Box = new MetroFramework.Controls.MetroComboBox();
             this.Building_Combo_Box = new MetroFramework.Controls.MetroComboBox();
             this.AddCapacity_cmb = new System.Windows.Forms.NumericUpDown();
@@ -170,9 +168,9 @@
             this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(157)))), ((int)(((byte)(169)))));
             this.metroLabel1.Location = new System.Drawing.Point(399, 5);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(131, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(141, 25);
             this.metroLabel1.TabIndex = 6;
-            this.metroLabel1.Text = "Lecture Portal";
+            this.metroLabel1.Text = "Location Portal";
             // 
             // button6
             // 
@@ -256,7 +254,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.MintCream;
-            this.groupBox3.Controls.Add(this.Refresh_Combo_Box);
             this.groupBox3.Controls.Add(this.BuildingNameComboBox);
             this.groupBox3.Controls.Add(this.SaveRoom_Name);
             this.groupBox3.Controls.Add(this.SaveBuilding_Name);
@@ -268,23 +265,11 @@
             this.groupBox3.Controls.Add(this.metroLabel29);
             this.groupBox3.Controls.Add(this.metroLabel26);
             this.groupBox3.Controls.Add(this.metroLabel27);
-            this.groupBox3.Location = new System.Drawing.Point(13, 45);
+            this.groupBox3.Location = new System.Drawing.Point(9, 45);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(460, 395);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
-            // 
-            // Refresh_Combo_Box
-            // 
-            this.Refresh_Combo_Box.Location = new System.Drawing.Point(327, 183);
-            this.Refresh_Combo_Box.Name = "Refresh_Combo_Box";
-            this.Refresh_Combo_Box.Size = new System.Drawing.Size(126, 29);
-            this.Refresh_Combo_Box.Style = MetroFramework.MetroColorStyle.Green;
-            this.Refresh_Combo_Box.TabIndex = 12;
-            this.Refresh_Combo_Box.Text = "Refresh";
-            this.Refresh_Combo_Box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Refresh_Combo_Box.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Refresh_Combo_Box.Click += new System.EventHandler(this.Refresh_Combo_Box_Click);
             // 
             // BuildingNameComboBox
             // 
@@ -404,7 +389,6 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.MintCream;
             this.groupBox2.Controls.Add(this.Refresh_Room_Btn);
-            this.groupBox2.Controls.Add(this.Refresh_Select_Building_Combo);
             this.groupBox2.Controls.Add(this.Room_Combo_Box);
             this.groupBox2.Controls.Add(this.Building_Combo_Box);
             this.groupBox2.Controls.Add(this.AddCapacity_cmb);
@@ -416,7 +400,7 @@
             this.groupBox2.Controls.Add(this.metroLabel4);
             this.groupBox2.Controls.Add(this.metroLabel7);
             this.groupBox2.Controls.Add(this.metroLabel5);
-            this.groupBox2.Location = new System.Drawing.Point(475, 45);
+            this.groupBox2.Location = new System.Drawing.Point(472, 45);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(409, 395);
             this.groupBox2.TabIndex = 14;
@@ -434,18 +418,6 @@
             this.Refresh_Room_Btn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.Refresh_Room_Btn.Click += new System.EventHandler(this.Refresh_Room_Btn_Click);
             // 
-            // Refresh_Select_Building_Combo
-            // 
-            this.Refresh_Select_Building_Combo.Location = new System.Drawing.Point(284, 47);
-            this.Refresh_Select_Building_Combo.Name = "Refresh_Select_Building_Combo";
-            this.Refresh_Select_Building_Combo.Size = new System.Drawing.Size(119, 29);
-            this.Refresh_Select_Building_Combo.Style = MetroFramework.MetroColorStyle.Green;
-            this.Refresh_Select_Building_Combo.TabIndex = 17;
-            this.Refresh_Select_Building_Combo.Text = "Refresh";
-            this.Refresh_Select_Building_Combo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Refresh_Select_Building_Combo.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Refresh_Select_Building_Combo.Click += new System.EventHandler(this.Refresh_Select_Building_Combo_Click);
-            // 
             // Room_Combo_Box
             // 
             this.Room_Combo_Box.FormattingEnabled = true;
@@ -462,7 +434,7 @@
             this.Building_Combo_Box.ItemHeight = 23;
             this.Building_Combo_Box.Location = new System.Drawing.Point(117, 47);
             this.Building_Combo_Box.Name = "Building_Combo_Box";
-            this.Building_Combo_Box.Size = new System.Drawing.Size(167, 29);
+            this.Building_Combo_Box.Size = new System.Drawing.Size(169, 29);
             this.Building_Combo_Box.TabIndex = 15;
             this.Building_Combo_Box.SelectedIndexChanged += new System.EventHandler(this.Building_Combo_Box_SelectedIndexChanged);
             // 
@@ -1117,6 +1089,7 @@
             this.button13.Size = new System.Drawing.Size(188, 42);
             this.button13.TabIndex = 4;
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button15
             // 
@@ -1441,9 +1414,7 @@
         private MetroFramework.Controls.MetroComboBox Room_Combo_Box;
         private MetroFramework.Controls.MetroComboBox Building_Combo_Box;
         private MetroFramework.Controls.MetroComboBox BuildingNameComboBox;
-        private MetroFramework.Controls.MetroTile Refresh_Combo_Box;
         private MetroFramework.Controls.MetroTile Refresh_Room_Btn;
-        private MetroFramework.Controls.MetroTile Refresh_Select_Building_Combo;
         private MetroFramework.Controls.MetroComboBox editRoomcombo_box;
         private MetroFramework.Controls.MetroTile Edit_Refresh_Button;
     }

@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -83,9 +83,9 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Lecture_Faculty_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.Lecturer_count_label = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -95,7 +95,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.Subject_Count_Label = new MetroFramework.Controls.MetroLabel();
             this.Subject_Year_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -115,7 +115,7 @@
             this.panel2.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lecture_Faculty_Chart)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -513,6 +513,7 @@
             this.button10.Size = new System.Drawing.Size(188, 42);
             this.button10.TabIndex = 4;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -666,9 +667,9 @@
             this.metroLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(157)))), ((int)(((byte)(169)))));
             this.metroLabel2.Location = new System.Drawing.Point(387, 8);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(131, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(124, 25);
             this.metroLabel2.TabIndex = 6;
-            this.metroLabel2.Text = "Lecture Portal";
+            this.metroLabel2.Text = "Statics Portal";
             // 
             // panel2
             // 
@@ -722,8 +723,8 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.metroTabControl1.Location = new System.Drawing.Point(237, 51);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -735,7 +736,7 @@
             // metroTabPage1
             // 
             this.metroTabPage1.Controls.Add(this.metroLabel3);
-            this.metroTabPage1.Controls.Add(this.chart2);
+            this.metroTabPage1.Controls.Add(this.Lecture_Faculty_Chart);
             this.metroTabPage1.Controls.Add(this.metroPanel1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
@@ -750,7 +751,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(246, 29);
+            this.metroLabel3.Location = new System.Drawing.Point(288, 29);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(158, 19);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Black;
@@ -758,29 +759,29 @@
             this.metroLabel3.Text = "Total Lecturer Count =";
             this.metroLabel3.UseStyleColors = true;
             // 
-            // chart2
+            // Lecture_Faculty_Chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(187, 118);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Legend = "Legend1";
-            series1.Name = "Faculty";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(495, 388);
-            this.chart2.TabIndex = 10;
-            this.chart2.Text = "chart2";
+            chartArea4.Name = "ChartArea1";
+            this.Lecture_Faculty_Chart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.Lecture_Faculty_Chart.Legends.Add(legend4);
+            this.Lecture_Faculty_Chart.Location = new System.Drawing.Point(187, 118);
+            this.Lecture_Faculty_Chart.Name = "Lecture_Faculty_Chart";
+            this.Lecture_Faculty_Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series4.Legend = "Legend1";
+            series4.Name = "Faculty";
+            this.Lecture_Faculty_Chart.Series.Add(series4);
+            this.Lecture_Faculty_Chart.Size = new System.Drawing.Size(495, 388);
+            this.Lecture_Faculty_Chart.TabIndex = 10;
+            this.Lecture_Faculty_Chart.Text = "chart2";
             // 
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.metroPanel1.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.metroPanel1.Controls.Add(this.metroLabel9);
+            this.metroPanel1.Controls.Add(this.Lecturer_count_label);
             this.metroPanel1.Controls.Add(this.metroLabel4);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -793,16 +794,16 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel9
+            // Lecturer_count_label
             // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(382, 22);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel9.TabIndex = 10;
-            this.metroLabel9.Text = "40";
+            this.Lecturer_count_label.AutoSize = true;
+            this.Lecturer_count_label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Lecturer_count_label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Lecturer_count_label.Location = new System.Drawing.Point(418, 22);
+            this.Lecturer_count_label.Name = "Lecturer_count_label";
+            this.Lecturer_count_label.Size = new System.Drawing.Size(32, 25);
+            this.Lecturer_count_label.TabIndex = 10;
+            this.Lecturer_count_label.Text = "40";
             // 
             // metroLabel4
             // 
@@ -873,18 +874,18 @@
             // 
             // Programme_GropCount_Chart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Programme_GropCount_Chart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Programme_GropCount_Chart.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.Programme_GropCount_Chart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.Programme_GropCount_Chart.Legends.Add(legend5);
             this.Programme_GropCount_Chart.Location = new System.Drawing.Point(133, 98);
             this.Programme_GropCount_Chart.Name = "Programme_GropCount_Chart";
             this.Programme_GropCount_Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series2.Legend = "Legend1";
-            series2.Name = "Programme";
-            this.Programme_GropCount_Chart.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series5.Legend = "Legend1";
+            series5.Name = "Programme";
+            this.Programme_GropCount_Chart.Series.Add(series5);
             this.Programme_GropCount_Chart.Size = new System.Drawing.Size(495, 388);
             this.Programme_GropCount_Chart.TabIndex = 14;
             this.Programme_GropCount_Chart.Text = "chart1";
@@ -918,7 +919,7 @@
             // 
             this.metroPanel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.metroPanel3.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.metroPanel3.Controls.Add(this.metroLabel11);
+            this.metroPanel3.Controls.Add(this.Subject_Count_Label);
             this.metroPanel3.Controls.Add(this.Subject_Year_Chart);
             this.metroPanel3.Controls.Add(this.metroLabel7);
             this.metroPanel3.Controls.Add(this.metroLabel8);
@@ -933,31 +934,31 @@
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
             // 
-            // metroLabel11
+            // Subject_Count_Label
             // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.Location = new System.Drawing.Point(362, 24);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(32, 25);
-            this.metroLabel11.TabIndex = 14;
-            this.metroLabel11.Text = "40";
+            this.Subject_Count_Label.AutoSize = true;
+            this.Subject_Count_Label.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Subject_Count_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Subject_Count_Label.Location = new System.Drawing.Point(362, 24);
+            this.Subject_Count_Label.Name = "Subject_Count_Label";
+            this.Subject_Count_Label.Size = new System.Drawing.Size(32, 25);
+            this.Subject_Count_Label.TabIndex = 14;
+            this.Subject_Count_Label.Text = "40";
             // 
             // Subject_Year_Chart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.Subject_Year_Chart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.Subject_Year_Chart.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.Subject_Year_Chart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.Subject_Year_Chart.Legends.Add(legend6);
             this.Subject_Year_Chart.Location = new System.Drawing.Point(116, 101);
             this.Subject_Year_Chart.Name = "Subject_Year_Chart";
             this.Subject_Year_Chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series3.Legend = "Legend1";
-            series3.Name = "Academic Year";
-            this.Subject_Year_Chart.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series6.Legend = "Legend1";
+            series6.Name = "Academic Year";
+            this.Subject_Year_Chart.Series.Add(series6);
             this.Subject_Year_Chart.Size = new System.Drawing.Size(495, 388);
             this.Subject_Year_Chart.TabIndex = 14;
             this.Subject_Year_Chart.Text = "chart3";
@@ -1020,7 +1021,7 @@
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lecture_Faculty_Chart)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroTabPage4.ResumeLayout(false);
@@ -1074,7 +1075,7 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Lecture_Faculty_Chart;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
@@ -1087,9 +1088,9 @@
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel Lecturer_count_label;
         private MetroFramework.Controls.MetroLabel StudentGroupCount_Label;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel Subject_Count_Label;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox11;

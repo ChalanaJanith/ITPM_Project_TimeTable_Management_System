@@ -235,6 +235,8 @@ namespace ITPM_Project
                 con.Close();
 
                 ClearRoomsTextBox();
+                Refresh_building_from_Room_Table();
+                
                 RoomAutono();
 
             }
@@ -310,10 +312,36 @@ namespace ITPM_Project
 
         }
 
+        //When the Add the Building name to room table added value show through the Location form building combo box-------------------
+        private void Refresh_building_from_Room_Table()
+        {
+
+            sql = "select DISTINCT BuildingName from RoomTable";
+            cmd = new SqlCommand(sql, con);
+            con.Open();
+            dr = cmd.ExecuteReader();
+            Building_Combo_Box.Items.Clear();
+
+            while (dr.Read())
+            {
+                Building_Combo_Box.Items.Add(dr[0]);
+
+            }
+
+            con.Close();
+            
+        }
+
+        private void Refresh_Room_from_Room_Table()
+        {
+
+        }
+
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
         {
            cmbdisp();
            Select_Building_ComboBox();
+            Refresh_Room_from_Room_Table();
             LoadLocations();
 
         }
@@ -344,7 +372,7 @@ namespace ITPM_Project
 
         private void Refresh_Select_Building_Combo_Click(object sender, EventArgs e)
         {
-            sql = "select DISTINCT BuildingName from RoomTable";
+           /* sql = "select DISTINCT BuildingName from RoomTable";
             cmd = new SqlCommand(sql, con);
             con.Open();
             dr = cmd.ExecuteReader();
@@ -356,12 +384,12 @@ namespace ITPM_Project
 
             }
 
-            con.Close();
+            con.Close(); */
         }
 
         private void Room_Combo_Box_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void Refresh_Room_Btn_Click(object sender, EventArgs e)
@@ -659,6 +687,23 @@ namespace ITPM_Project
             }
 
             con.Close();
+        }
+
+
+
+
+
+
+
+
+        //Statics Button Navigation -------------------
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Visualizingstatistic visual = new Visualizingstatistic();
+            visual.ShowDialog();
+
+           
         }
     }
 }

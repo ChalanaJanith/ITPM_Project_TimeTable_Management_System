@@ -54,6 +54,9 @@ namespace ITPM_Project
             LoadProgramme_Std_Group_Chart();
             total_Std_GrpCount();
             LoadSubject_YearChart();
+            Load_Lecturer_Faculty_Chart();
+            totalLecturer_Count();
+            total_Subject_Count();
 
         }
 
@@ -127,6 +130,79 @@ namespace ITPM_Project
 
             Subject_Year_Chart.DataBind();
             con.Close();
+        }
+
+        //Calculating total subject count
+        private void total_Subject_Count()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(Code) as subCount FROM Subjects_Table";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string sub_count = (string)dr["subCount"].ToString();
+                Subject_Count_Label.Text = sub_count;
+
+
+            }
+            con.Close();
+
+        }
+
+
+
+        //Lecture Faculty Chart...................................
+
+
+        public void Load_Lecturer_Faculty_Chart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select Faculty,COUNT(ID) as c from Lecturer_table GROUP BY Faculty", con);
+            adapt.Fill(ds, "Faculty");
+            Lecture_Faculty_Chart.DataSource = ds.Tables["Faculty"];
+
+            Lecture_Faculty_Chart.Series["Faculty"].XValueMember = "Faculty";
+            Lecture_Faculty_Chart.Series["Faculty"].YValueMembers = "c";
+            Lecture_Faculty_Chart.Series["Faculty"].ChartType = SeriesChartType.Bar;
+
+
+            Lecture_Faculty_Chart.DataBind();
+            con.Close();
+
+        }
+
+        // calculating total lecturer count---------------------------
+
+        private void totalLecturer_Count()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(ID) as lecCount FROM Lecturer_table";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string lec_count = (string)dr["lecCount"].ToString();
+                Lecturer_count_label.Text = lec_count;
+
+
+            }
+            con.Close();
+
         }
 
 
@@ -227,6 +303,21 @@ namespace ITPM_Project
         private void metroLabel17_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+
+
+
+        //Location Navigation Button---------------------------
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddandManageLocations addandManageLocations = new AddandManageLocations();
+            addandManageLocations.ShowDialog();
         }
     }
 }
